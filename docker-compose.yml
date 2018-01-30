@@ -21,8 +21,8 @@ services:
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-      - /etc/logstash/etcdevmon.crt:/usr/share/logstash/etcdevmon.crt
-      - /etc/logstash/etcdevmon.key:/usr/share/logstash/etcdevmon.key
+      - /etc/logstash/etcdevmon.logstash.crt:/usr/share/logstash/etcdevmon.logstash.crt
+      - /etc/logstash/etcdevmon.logstash.key:/usr/share/logstash/etcdevmon.logstash.key
     ports:
       - "5000:5000"
     environment:
