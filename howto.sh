@@ -107,3 +107,10 @@
   502  docker-machine env
 
   506  history | tail -100 > howto.sh
+
+  docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=1gb blog
+
+  eval $(docker-machine env etcdevelk2)
+
+  docker-compose up
+

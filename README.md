@@ -67,7 +67,7 @@ $ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
 
 ---
 _whilei:_
-- `docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=1gb blog`
+- `docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=1gb --digitalocean-image docker  blog`
 
 ---
 
