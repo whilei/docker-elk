@@ -4,4 +4,6 @@
 #
 server.name: kibana
 server.host: "0"
+server.ssl.enabled: true
+server.ssl.key:
 elasticsearch.url: http://elasticsearch:9200
