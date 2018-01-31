@@ -9,10 +9,7 @@ RUN elasticsearch-plugin install --batch x-pack
 # [-b, --batch] [-h, --help] [-E <KeyValuePair>]
 # [-s, --silent] [-u, --url "<URL>"] [-v, --verbose]
 # https://docs.docker.com/engine/reference/builder/#onbuild
-RUN echo "You're about to be prompted to enter some password for default users"
-RUN echo "elastic, kibana, and logstash. Remember the passwords and update"
-RUN echo "repsective 'changme' values in the .yaml configuration files before running the containers."
-ONBUILD RUN x-pack/setup-passwords interactive
+ONBUILD RUN x-pack/setup-passwords auto --batch --verbose
 
 # Add your elasticsearch plugins setup here
 # Example: RUN elasticsearch-plugin install analysis-icu
