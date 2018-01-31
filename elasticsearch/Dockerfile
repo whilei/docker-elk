@@ -2,7 +2,7 @@
 FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.1.0
 
 # '--batch' option to automatically grant permissions and bypass install prompt.
-RUN elasticsearch-plugin install x-pack --batch
+RUN elasticsearch-plugin install --batch x-pack
 
 # bin/x-pack/setup-passwords auto|interactive
 # [-b, --batch] [-h, --help] [-E <KeyValuePair>]
